@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjtvonf8j5rjn"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_f8k0k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ieqsn"]
+font_size = 70
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 649.0
+script = ExtResource("1_f8k0k")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 242.0
+offset_right = 631.0
+offset_bottom = 354.0
+text = "Hello
+"
+label_settings = SubResource("LabelSettings_ieqsn")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 355.0
+offset_top = 76.5
+offset_right = -332.0
+offset_bottom = 152.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click me"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 516.0
+offset_right = 780.0
+offset_bottom = 572.0
+text = "Clear"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

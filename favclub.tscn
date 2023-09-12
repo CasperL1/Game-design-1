@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs8bbacuugsna"]
+
+[ext_resource type="Script" path="res://favclub.gd" id="1_yn4uf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u8kyn"]
+font_size = 101
+
+[node name="favclub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yn4uf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 150.0
+offset_right = 832.0
+offset_bottom = 349.0
+label_settings = SubResource("LabelSettings_u8kyn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnshow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 350.0
+offset_right = 732.0
+offset_bottom = 422.0
+text = "show"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 446.0
+offset_right = 734.0
+offset_bottom = 518.0
+text = "clear"
+
+[connection signal="pressed" from="btnshow" to="." method="_on_btnshow_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
