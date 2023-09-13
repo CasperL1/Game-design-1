@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://co45nb4kj2m5o"]
+
+[ext_resource type="Script" path="res://prog88a.gd" id="1_c0auc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_np5x2"]
+font_size = 61
+
+[node name="prog88a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c0auc")
+
+[node name="num1" type="Label" parent="."]
+layout_mode = 0
+offset_right = 282.0
+offset_bottom = 121.0
+text = "Enter num1"
+label_settings = SubResource("LabelSettings_np5x2")
+
+[node name="num2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 118.0
+offset_right = 355.0
+offset_bottom = 239.0
+text = "Enter num2"
+label_settings = SubResource("LabelSettings_np5x2")
+
+[node name="txtnum1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 357.0
+offset_right = 962.0
+offset_bottom = 105.0
+
+[node name="txtnum2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 138.0
+offset_right = 965.0
+offset_bottom = 243.0
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 262.0
+offset_right = 773.0
+offset_bottom = 628.0
+
+[node name="btncalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 281.0
+offset_right = 1126.0
+offset_bottom = 375.0
+text = "Calculate"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 393.0
+offset_right = 1135.0
+offset_bottom = 487.0
+text = "Clear"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 512.0
+offset_right = 1131.0
+offset_bottom = 606.0
+text = "exit"
+
+[connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
