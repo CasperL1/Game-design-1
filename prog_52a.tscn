@@ -6,7 +6,7 @@
 line_spacing = 2.195
 font_size = 101
 
-[node name="prog52a" type="Control"]
+[node name="prog52a (done)" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

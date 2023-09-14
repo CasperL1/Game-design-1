@@ -1,36 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://cippi03s2rrww"]
+[gd_scene load_steps=3 format=3 uid="uid://cippi03s2rrww"]
 
-[ext_resource type="Script" path="res://Button.gd" id="1_6xnof"]
-[ext_resource type="Script" path="res://Button2.gd" id="2_f1xyt"]
+[ext_resource type="Script" path="res://name.gd" id="1_tx4r5"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_57yd5"]
-font_size = 100
+[sub_resource type="LabelSettings" id="LabelSettings_03beg"]
+font_size = 36
 
-[node name="Label" type="Label"]
-offset_left = 218.0
-offset_top = 136.0
-offset_right = 1010.0
-offset_bottom = 412.0
-text = "Whats My Name"
-label_settings = SubResource("LabelSettings_57yd5")
+[node name="name" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx4r5")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 124.0
-offset_top = 281.0
-offset_right = 551.0
-offset_bottom = 377.0
-text = "Click here"
-script = ExtResource("1_6xnof")
+offset_left = 283.0
+offset_top = 309.0
+offset_right = 846.0
+offset_bottom = 452.0
+text = "Click to Know my name"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 127.0
-offset_top = 394.0
-offset_right = 554.0
-offset_bottom = 490.0
+offset_left = 333.0
+offset_top = 478.0
+offset_right = 798.0
+offset_bottom = 604.0
 text = "clear"
-script = ExtResource("2_f1xyt")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 118.0
+offset_right = 878.0
+offset_bottom = 265.0
+label_settings = SubResource("LabelSettings_03beg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

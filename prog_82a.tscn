@@ -5,7 +5,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_lpgf0"]
 font_size = 51
 
-[node name="Prog_82a" type="Control"]
+[node name="Prog_82a (done)" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,3 +84,5 @@ offset_bottom = 626.0
 text = "exit"
 
 [connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
+[connection signal="pressed" from="btn exit" to="." method="_on_btn_exit_pressed"]

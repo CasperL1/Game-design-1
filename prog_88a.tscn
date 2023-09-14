@@ -5,7 +5,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_np5x2"]
 font_size = 61
 
-[node name="prog88a" type="Control"]
+[node name="prog88a (done)" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

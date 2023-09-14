@@ -11,9 +11,9 @@ func _process(delta):
 	pass
 
 
-func _on_btnshow_pressed():
-	$Label.text = "i was born in california"
+func _on_button_pressed():
+	$Label.text = "Logan Casper"
 
 
-func _on_btnclear_pressed():
-	$label.text = ""
+func _on_button_2_pressed():
+	$Label.text = ""

@@ -11,11 +11,3 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	pass # Replace with function body.
-	$Panel/Label.text = "hello, world!"
-
-
-func _on_button_2_pressed():
-	pass # Replace with function body.
-	$Panel/Label.text = ""

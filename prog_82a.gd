@@ -12,7 +12,18 @@ func _process(delta):
 
 
 func _on_btncalc_pressed():
-	var speedlimit = int($txtlimit.text)
-	var carspeed = int($txtspeed.text)
-	var milesover = carspeed - speedlimit
-	var fine = 20 + (miles)
+	var speedLimit = int($txtlimit.text)
+	var carSpeed = int($txtspeed.text)
+	var milesOver = carSpeed - speedLimit
+	var fine = 20 + (milesOver * 5)
+	$lblout.text = "Fine: %.2f" % fine
+
+
+func _on_btn_exit_pressed():
+	get_tree().quit()
+
+
+func _on_btnclear_pressed():
+	$txtlimit.text = ""
+	$txtspeed.text = ""
+	$lblout.text = ""
