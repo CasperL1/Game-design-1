@@ -13,12 +13,12 @@ func _process(delta):
 
 func _on_btncalc_pressed():
 	var num1 = int($txtnum1.text)
-	Var num2 = int($txtnum2.text)
-	Var sum = num1 + num2
-	Var diff = num1 - num2
-	Var abs = abs(diff)
-	Var max = 0
-	Var min = 0
+	var num2 = int($txtnum2.text)
+	var sum = num1 + num2
+	var diff = num1 - num2
+	var abs = abs(diff)
+	var max = 0
+	var min = 0
 	if num1 > num2:
 		max = num1
 	else:
@@ -27,8 +27,18 @@ func _on_btncalc_pressed():
 		min = num2
 	else:
 		min = num1
-	$lblout.text = "sum = " + str(Sum) + \
-				"\nDifference = " + str(Diff) + \
+	$lblout.text = "sum = " + str(sum) + \
+				"\nDifference = " + str(diff) + \
 				"\nAbs. Distance = " + str(abs) + \
 				"\nMax = " + str(max) + \
 				"\nMin = " + str(min)
+
+
+func _on_btnexit_pressed():
+	get_tree().quit()
+
+
+func _on_btnclear_pressed():
+	$txtnum1.text = ""
+	$txtnum2.text = ""
+	$lblout.text = ""

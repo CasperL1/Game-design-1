@@ -75,3 +75,5 @@ offset_bottom = 606.0
 text = "exit"
 
 [connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]
